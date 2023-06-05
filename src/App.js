@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { ColoredCardsList } from './Coloredcards';
+import { OverviewChart } from './OverviewChart';
+import { ProjectsList } from './Projects';
+import { MenuBar } from './MenuBar';
+import { StatusCardsList } from './StatusCards';
+import { Illustrations } from './Illustrations';
+import { DevelopmentApproach } from './DevelopmentApproach';
+import { SearchBar } from './SearchBar';
+import { Title } from './Title';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='main1'>
+        <MenuBar />
+      </div>
+      <div className='main2'>
+        <SearchBar />
+      </div>
+      <div className='main3'>
+        <Title />
+        <StatusCardsList />
+        <OverviewChart />
+        
+        <div className='main4'>
+          <ProjectsList />
+          <Illustrations />
+        </div>
+        <div className='main5'>
+          <ColoredCardsList />
+          <DevelopmentApproach />
+        </div>
+      </div>
     </div>
   );
 }
